@@ -1,0 +1,12 @@
+# raspbi code for output blip
+
+import RPi.GPIO as gpio
+gpio.setmode(gpio.BCM)
+from time import sleep 
+GPIO.setup(port_or_pin, gpio.OUT)
+ 
+gpio.setup(24, GPIO.OUT) # set a pin as an output   
+gpio.output(24, 1)       # set pin value high 
+sleep(2)                 # sleep for 2 seconds 
+gpio.output(24, 0)       # set pin value low 
+
